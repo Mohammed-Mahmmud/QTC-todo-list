@@ -33,7 +33,6 @@
                                         <th>Image</th>
                                         <th>Username</th>
                                         <th>Email</th>
-                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -57,12 +56,6 @@
                                             </td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->email }}</td>
-                                            <td>
-                                                <span
-                                                    class="@if ($item->status == 'ACTIVE') badge bg-success-bright text-success @else badge bg-danger-bright text-danger @endif"
-                                                    data-toggle="tooltip" title="Active"
-                                                    onclick="changeStatus('{{ $item->id }}')">{{ $item->status }}</span>
-                                            </td>
                                             <td>
                                                 <div class="d-flex align-items-center">
 

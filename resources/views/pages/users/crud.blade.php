@@ -52,29 +52,18 @@
                                                         <input type="email" class="form-control" name="email"
                                                             value="{{ $data->email ?? '' }}">
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label>Image</label>
-                                                        <input type="file" class="form-control" name="image">
-                                                    </div>
+
                                                 </div>
                                                 <div class="col-md-6">
-
-                                                    <div class="form-group">
-                                                        <label>Status</label>
-                                                        <select class="form-control" name="status">
-                                                            @foreach (App\Models\User::STATUS as $item)
-                                                                <option value="{{ $item }}"
-                                                                    @if (isset($data) && $item == $data->status) selected @endif>
-                                                                    {{ $item }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
                                                     <div class="form-group">
                                                         <label>Password</label>
                                                         <input name="password" class="form-control" type="password"
                                                             value="{{ $data->password ?? '' }}">
                                                     </div>
-
+                                                    <div class="form-group">
+                                                        <label>Image</label>
+                                                        <input type="file" class="form-control" name="image">
+                                                    </div>
                                                 </div>
                                             </div>
 

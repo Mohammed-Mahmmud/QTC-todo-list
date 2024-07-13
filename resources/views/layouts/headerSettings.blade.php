@@ -4,8 +4,13 @@
     <div class="sidebar" id="user-menu">
         <div class="py-4 text-center" data-backround-image="{{ asset('dashboard') }}/demos/assets/media/image/image1.jpg">
             <figure class="avatar avatar-lg mb-3 border-0">
-                <img src="{{ asset('storage/' . auth()->user()->image ?? 'dashboard/demos/assets/media/image/user/women_avatar3.jpg') }}"
-                    class="rounded-circle" alt="image">
+                @if (auth()->user()->image)
+                    <img src="{{ asset('storage/' . auth()->user()->image ?? 'dashboard/demos/assets/media/image/user/women_avatar3.jpg') }}"
+                        class="rounded-circle" alt="image">
+                @else
+                    <img src="{{ asset('dashboard/demos/assets/media/image/user/women_avatar3.jpg') }}"
+                        class="rounded-circle" alt="image">
+                @endif
             </figure>
             <h5 class="d-flex align-items-center justify-content-center">{{ Auth::user()->name }}</h5>
             <div>

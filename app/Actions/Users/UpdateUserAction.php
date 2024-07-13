@@ -22,10 +22,6 @@ class UpdateUserAction
             $data['image'] = $imagePath;
         }
         $data['password'] = Hash::make($data['password']);
-        $user->update([
-            'status' => $data['status'],
-        ]);
-        // dd($data['status']);
         $user->update($data);
         return $user;
     }
